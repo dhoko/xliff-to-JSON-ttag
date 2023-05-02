@@ -86,7 +86,12 @@ def get_translation(node: etree._Element, namespace: str, all_states: bool = Fal
         plurals_states = []
         source_text = ""
         # Multiline format ex: Context: Error
-        context = note.text.split("\n")[0].strip().split("Context:")[1].strip()
+        context = (
+            note.text.split("\n")[0].strip().split("Context:")[1].strip()
+            if note.text and "Context:" in note.text
+            else ""
+        )
+
 
         for unit in node:
             if is_tag(unit, namespace, "trans-unit"):
