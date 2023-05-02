@@ -26,3 +26,11 @@ optional arguments:
 ex: `$ python convert.py --input demo/webapp.xliff --output monique.json --locale fr`
 
 > for `[--locale]` you can open the file `lib/config/gettext-plurals.json` to see all the options you have
+
+## How to get the xliff from crowdin?
+
+You need to download the translations from the download button here when you open your language.
+
+![download](https://user-images.githubusercontent.com/713283/235617439-b80a1642-dfa5-40c7-a7ec-eb190e014ca1.jpg)
+
+> :warning: Do not pick the 2 options _export xxx xliff_ as crowdin has an issue and breaks the plurals inside these files.
